@@ -12,7 +12,9 @@ const forecast = (latitude, longitude, callback) => {
     }  else if (body.error) {
       callback('Invalid input.', undefined)
     }  else {
-      callback(undefined, body.current.weather_descriptions[0] + ' with ' + fToC(body.current.temperature) + '\xB0C.')
+      const forecastinfoOne = body.current.weather_descriptions[0] + ' with ' + fToC(body.current.temperature) + '\xB0C.'
+      const forecastinfoTwo = 'The current wind speed is ' + Math.round(body.current.wind_speed*1.6) + ' kmh.'
+      callback(undefined, forecastinfoOne + forecastinfoTwo)
     }
   })
 }

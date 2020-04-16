@@ -4,7 +4,7 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const request = require('request')
-
+// we do see a new color by doing some git seeing?
 const app = express()
 
 // Define paths for Express config
